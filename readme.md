@@ -10,7 +10,7 @@ all example will using bash as script interpreter
 
 ## variable and 
 
-```
+```bash
 var="http://www.example.com/123.htm"
 echo ${var#*/}
 # will show /www.example.com/123.htm
