@@ -84,7 +84,8 @@ sed -n '/^[^#]/w /var/content' /fstabtrain
 
 ## awk
 only give example
-```
+```bash
+
 echo "column1 column2"  | awk '{print "1:"$1",2:"$2}'
 
 echo "column1:column2"  |  | awk -F ':' '{print "1:"$1",2:"$2}'
