@@ -70,7 +70,8 @@ echo $?
 # will not 0
 ls
 # will show 0
-# $? Show if the previous command ran successfully. If it was successful, display 0; if there was an error, display a different number.
+# $? Show if the previous command ran successfully.
+# If it was successful, display 0; if there was an error, display a different number.
 
 echo $$
 # show current bash interpreter pid
@@ -80,7 +81,41 @@ echo $$
 ## function 
 
 ```bash
+function showAllParms() {
+  # $@ will show all parms
+  echo $@
+}
 
+showAllParms parms0 parms1
+# wiil show: parms0 parms1
+
+
+function showSpecParms() {
+  echo $#
+  echo ${1}
+}
+showSpecParms parms0 parms1
+# wiil show: parms1
+
+function showParmsCount() {
+  # show count of parms
+  echo $#
+  echo ${1}
+}
+
+showParmsCount parm0  parm1
+# wiil show: 2
+# parms0
+
+
+showParmsCount pa  rm0   parms1
+# wiil show: 3
+# pa
+
+# " Can convert a string with spaces into a single paramete
+showParmsCount "pa   rm0"   parms1
+# wiil show: 2
+# pa   rm0
 
 ```
 
