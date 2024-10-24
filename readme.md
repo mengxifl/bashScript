@@ -8,7 +8,7 @@ On the first line of your script, specify that you are using bash as your script
 ```
 all example will using bash as script interpreter
 
-## variable string 
+# variable string 
 
 ```bash
 var="http://www.example.com/123.htm"
@@ -76,9 +76,24 @@ ls
 echo $$
 # show current bash interpreter pid
 ```
+## varible Operation
+```bash
+a=1 && b=2 
+echo "ALL_FILE_SIZE=$((${a}+${b}))"
+```
+
+## give varible new value from other commmd
+```bash
+VAR=`ls`
+echo $VAR
+
+VAR=$(ls)
+echo $VAR
+```
 
 
-## function 
+
+## varible with function 
 
 ```bash
 function showAllParms() {
@@ -117,7 +132,68 @@ showParmsCount "pa   rm0"   parms1
 # wiil show: 2
 # pa   rm0
 
+VAR="a b"
+showParmsCount $VAR
+# wiil show: 2
+# a
+
+showParmsCount "$VAR"
+# wiil show: 1
+# a b
+
+VAR="globle var"
+
+function localVarible() {
+   local VAR="local var"
+   echo $VAR
+}
+localVarible
+echo $VAR
+# local var
+# globle var
+
+VAR="globle var"
+function changeGlobleVarible() {
+   VAR="globle var new"
+   echo $VAR
+}
+changeGlobleVarible
+echo $VAR
+# globle var new
+# globle var new
 ```
+
+
+# redirect
+```bash
+# redirect results  to a file
+command > file
+
+# redirect stdout to a file
+command 1> file
+
+# redirect error to a file
+command 2> file
+
+# redirect stdout and error to a file
+command &> file
+
+ # redirect stdout and error to different file
+command 2>/errorfile 1>/truefile
+
+
+# clear file and set file content to fist line
+echo "fist line" > /file
+
+# append  second line to file
+echo "second line" > /file
+
+echo "ls" > bashCommand
+sleep 1
+bash < bashcommand
+
+```
+
 
 
 
