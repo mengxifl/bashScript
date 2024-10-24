@@ -161,6 +161,20 @@ changeGlobleVarible
 echo $VAR
 # globle var new
 # globle var new
+
+function shiftParms() {
+  while [[ $# -gt 0 ]]; do
+     echo ${1}
+     shift
+  done
+}
+
+shiftParms  1 2 3 4 5
+# 1
+# 2
+# 3
+# 4
+# 5
 ```
 
 
