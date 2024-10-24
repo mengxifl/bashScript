@@ -203,6 +203,10 @@ bash < bashcommand
 ```
 
 
+## pipe
+```
+echo "etc" | ls 
+```
 
 
 
