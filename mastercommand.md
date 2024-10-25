@@ -127,14 +127,14 @@ END{print "END"}
 ' 
 
 echo '1#2#3#4#5' |awk -v RS='#' '
-{ if($1>2&&$1<5) {print "2-5之间"} else {print "不在2-5之间"} };
+{ if($1>2&&$1<5) {print "between 2-5"} else {print "not between 2-5"} };
 BEGIN{print "BEGIN"};
 END{print "END"}
 ' 
 
 
 echo '1#2#3#4#5' |awk -v RS='#' '
-{ if($1>2&&$1<5) {print "2-5之间"} else { } };
+{ if($1>2&&$1<5) {print "2-5 between"} else { } };
 BEGIN{print "BEGIN"};
 END{print "END"}
 ' 
