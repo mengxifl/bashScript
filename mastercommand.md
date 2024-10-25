@@ -138,5 +138,5 @@ echo '1#2#3#4#5' |awk -v RS='#' '
 BEGIN{print "BEGIN"};
 END{print "END"}
 ' 
-echo "$1" | awk '{ split("B KB MB GB TB PB", v); s=1; while($1>=1024){ $1/=1024; s++ } printf "%.2f %s", $1, v[s] }'
+echo "99999" | awk '{ split("B KB MB GB TB PB", v); s=1; while($1>=1024){ $1/=1024; s++ } printf "%.2f %s", $1, v[s] }'
 ```
