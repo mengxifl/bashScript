@@ -8,7 +8,7 @@
 
 2、The fetch interval is 30 seconds
 
-```
+```bash
 #!/bin/bash
 function init() {
   ALL_REQUIRE_PARMS[2]='monitors'
