@@ -22,8 +22,8 @@ function showHelp() {
       Require all of the following parameters
 
       --monitors "['"'"https://www.google.com','https://www.youtube.com"'"']" 
-          monitor baidu
-          monitor bing
+          monitor google
+          monitor youtube
 
       --interval "60"
           search 60s one time
