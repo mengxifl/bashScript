@@ -21,7 +21,7 @@ function showHelp() {
   echo '
       Require all of the following parameters
 
-      --monitors "['"'"https://www.baidu.com','https://www.bing.com"'"']" 
+      --monitors "['"'"https://www.google.com','https://www.youtube.com"'"']" 
           monitor baidu
           monitor bing
 
